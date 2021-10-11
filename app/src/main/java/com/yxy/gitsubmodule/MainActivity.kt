@@ -4,6 +4,7 @@ import androidx.appcompat.app.AppCompatActivity
 import android.os.Bundle
 import android.widget.Button
 import android.widget.TextView
+import com.yxy.common.ToastUtils
 
 class MainActivity : AppCompatActivity() {
     override fun onCreate(savedInstanceState: Bundle?) {
@@ -15,6 +16,7 @@ class MainActivity : AppCompatActivity() {
 
         button.setOnClickListener {
             textview.text = "调用了sub module方法"
+            ToastUtils.show(this, "引入了子模块的方法")
         }
     }
 }

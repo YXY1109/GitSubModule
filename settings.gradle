@@ -8,3 +8,4 @@ dependencyResolutionManagement {
 }
 rootProject.name = "GitSubModule"
 include ':app'
+include ':GitSubModuleCommon'

@@ -1,0 +1,3 @@
+[submodule "GitSubModuleCommon"]
+	path = GitSubModuleCommon
+	url = https://github.com/YXY1109/GitSubModuleCommon.git
