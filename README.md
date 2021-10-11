@@ -7,6 +7,11 @@ git submodule add https://github.com/YXY1109/GitSubModuleCommon.git
 setting.gradle 添加：include ':GitSubModuleCommon'
 
 ### 第三步：引入工程中
+
 File->Project Structure->Dependencies
+
+### 更新代码，指定更新的名称
+
+git submodule update --remote GitSubModuleCommon
 
 

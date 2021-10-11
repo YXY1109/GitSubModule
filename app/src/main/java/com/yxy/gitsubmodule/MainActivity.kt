@@ -16,7 +16,7 @@ class MainActivity : AppCompatActivity() {
 
         button.setOnClickListener {
             textview.text = "调用了sub module方法"
-            ToastUtils.show(this, "引入了子模块的方法")
+            ToastUtils.show2(this, "引入了子模块的方法")
         }
     }
 }
