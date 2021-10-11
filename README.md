@@ -14,4 +14,6 @@ File->Project Structure->Dependencies
 
 git submodule update --remote GitSubModuleCommon
 
+### 修改维护代码，通过另外一个仓库单独维护，方便管理，写独立的测试
+
 
