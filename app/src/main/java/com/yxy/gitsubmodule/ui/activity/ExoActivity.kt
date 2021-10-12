@@ -13,6 +13,7 @@ import com.yxy.gitsubmodule.R
 /**
  * https://github.com/google/ExoPlayer
  * https://www.jianshu.com/p/cea336200990
+ * https://blog.csdn.net/achina2011jy/article/details/112674293
  */
 class ExoActivity : AppCompatActivity() {
     private val videoPath = "http://clips.vorwaerts-gmbh.de/big_buck_bunny.mp4"
@@ -31,14 +32,17 @@ class ExoActivity : AppCompatActivity() {
 
     private fun playVideo() {
         val player = SimpleExoPlayer.Builder(this).build()
+
         player.playWhenReady = true
 
         val mediaItem = MediaItem.fromUri(videoPath)
         player.setMediaItem(mediaItem)
+
         //player.addMediaItem()
-        player.prepare()
-        player.play()
 
         findViewById<PlayerView>(R.id.playerview).player = player
+
+        player.prepare()
+        player.play()
     }
 }
