@@ -1,0 +1,64 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical">
+
+    <TextView
+        android:id="@+id/textView"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="自定义view"
+        tools:ignore="MissingConstraints"
+        tools:layout_editor_absoluteX="175dp"
+        tools:layout_editor_absoluteY="120dp" />
+
+    <com.yxy.gitsubmodule.ui.view.MyTopView
+        android:id="@+id/myview"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        app:showRight="false"
+        app:text="自定义的text" />
+
+    <com.yxy.gitsubmodule.ui.view.LineTextView
+        android:layout_width="match_parent"
+        android:layout_height="100dp"
+        android:layout_marginTop="10dp" />
+
+    <com.yxy.gitsubmodule.ui.view.SquareView
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="10dp"
+        android:padding="10dp" />
+
+    <com.yxy.gitsubmodule.ui.view.HorizontaiView
+        android:layout_width="wrap_content"
+        android:layout_height="100dp"
+        android:paddingLeft="10dp">
+
+        <Button
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:text="我是人1" />
+
+        <Button
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:text="我是人2" />
+
+        <Button
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:text="我是人3" />
+
+    </com.yxy.gitsubmodule.ui.view.HorizontaiView>
+
+    <com.yxy.gitsubmodule.ui.view.TouchView
+        android:id="@+id/touchview"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="10dp"
+        android:background="@color/black" />
+</LinearLayout>
