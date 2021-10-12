@@ -1,4 +1,4 @@
-package com.yxy.gitsubmodule
+package com.yxy.gitsubmodule.ui
 
 import androidx.appcompat.app.AppCompatActivity
 import android.os.Bundle
@@ -8,24 +8,22 @@ import com.google.android.exoplayer2.MediaItem
 import com.google.android.exoplayer2.SimpleExoPlayer
 import com.google.android.exoplayer2.ui.PlayerView
 import com.yxy.common.ToastUtils
+import com.yxy.gitsubmodule.R
 
 /**
  * https://github.com/google/ExoPlayer
  * https://www.jianshu.com/p/cea336200990
  */
-class MainActivity : AppCompatActivity() {
+class ExoActivity : AppCompatActivity() {
     private val videoPath = "http://clips.vorwaerts-gmbh.de/big_buck_bunny.mp4"
 
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
-        setContentView(R.layout.activity_main)
+        setContentView(R.layout.activity_exo)
 
         var button = findViewById<Button>(R.id.button)
-        var textview = findViewById<TextView>(R.id.textview)
 
         button.setOnClickListener {
-            textview.text = "调用了sub module方法"
-            ToastUtils.show3(this, "引入了子模块的方法")
             playVideo()
         }
 
