@@ -1,6 +1,7 @@
 plugins {
     id 'com.android.application'
     id 'kotlin-android'
+    id 'kotlin-kapt'
 }
 
 android {
@@ -35,6 +36,13 @@ android {
             coroutines 'enable'
         }
     }
+
+    kapt {
+        arguments {
+            //依赖了RxJava时，rxhttp_rxjava参数为必须，传入RxJava版本号
+            arg("rxhttp_rxjava", "3.1.1")
+        }
+    }
 }
 
 dependencies {
@@ -54,4 +62,14 @@ dependencies {
     //协程
     implementation 'org.jetbrains.kotlinx:kotlinx-coroutines-core:1.5.0'
     implementation 'org.jetbrains.kotlinx:kotlinx-coroutines-android:1.5.0'
+
+    //rxhttp
+    implementation 'com.squareup.okhttp3:okhttp:4.9.1'
+//    implementation 'com.github.liujingxing.rxhttp:rxhttp:2.7.0'
+//    kapt 'com.github.liujingxing.rxhttp:rxhttp-compiler:2.7.0'
+
+    //rxjava
+    implementation 'io.reactivex.rxjava3:rxjava:3.1.1'
+    implementation 'io.reactivex.rxjava3:rxandroid:3.0.0'
+//    implementation 'com.github.liujingxing.rxlife:rxlife-rxjava3:2.2.1' //管理RxJava3生命周期，页面销毁，关闭请求
 }
