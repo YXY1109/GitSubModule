@@ -38,5 +38,6 @@
         android:id="@+id/playerview"
         android:layout_width="match_parent"
         android:layout_height="200dp"
+        app:controller_layout_id="@layout/layout_video_simple"
         app:layout_constraintTop_toBottomOf="@id/button2" />
 </androidx.constraintlayout.widget.ConstraintLayout>
